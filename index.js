@@ -1,3 +1,4 @@
+const path = require('path');
 const prefix = require('global-prefix');
 
 if (!prefix) {
@@ -5,15 +6,15 @@ if (!prefix) {
   return -1;
 }
 
-const binPrefix = `${prefix}/bin`;
-const paths = process.env.PATH.split(':');
+const binPrefix = `${prefix}${path.sep}bin`;
+const paths = process.env.PATH.split(path.delimiter);
 
 if (paths.includes(binPrefix)) {
   console.log(`${binPrefix} found in PATH`);
 } else {
   console.log(`${binPrefix} not found in PATH`);
-  paths.forEach(path => {
-    console.log(`  ${path}`)
+  paths.forEach(x => {
+    console.log(`  ${x}`)
   });
 }
 
