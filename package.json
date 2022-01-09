@@ -1,0 +1,14 @@
+{
+  "name": "precheck",
+  "version": "1.0.0",
+  "description": "check if prefix in path",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Riesbeck",
+  "license": "ISC",
+  "dependencies": {
+    "global-prefix": "^3.0.0"
+  }
+}
